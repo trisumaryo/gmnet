@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#070e09">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+    <title>Paket - GMNET</title>
+    <!-- Tailwind CSS (compiled via CLI) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body
+    class="text-white min-h-screen md:h-screen w-full md:overflow-hidden overflow-y-auto px-3 pb-3 pt-1 md:px-4 md:pb-4 md:pt-2 lg:px-5 lg:pb-5 lg:pt-3 flex flex-col antialiased">
+    <!-- Dibuat oleh TRI SUMARYO IG: @trisumaryoo -->
+    <header class="w-full max-w-[1200px] mx-auto mb-4 shrink-0 relative z-50">
+        <nav class="flex items-center justify-between px-6 py-4 relative border-b border-gray-700/50">
+            <!-- Logo Left -->
+            <a href="login.html" class="flex items-center transition-transform duration-300 hover:scale-110">
+                <img src="img/logo.png" alt="GMNET Logo" class="h-20 w-auto">
+            </a>
+
+            <!-- Menu Right (Desktop) -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="login.html"
+                    class="text-white text-xl font-medium hover:underline decoration-[#1ed760] decoration-2 underline-offset-8 transition-all duration-200">Login</a>
+                <a href="paket.html"
+                    class="text-white text-xl font-medium underline decoration-[#1ed760] decoration-2 underline-offset-8 transition-all duration-200">Paket</a>
+
+                <a href="faq.html"
+                    class="text-white text-xl font-medium hover:underline decoration-[#1ed760] decoration-2 underline-offset-8 transition-all duration-200">Faq</a>
+            </div>
+
+
+
+            <!-- Hamburger Button (Mobile) -->
+            <button id="mobileMenuBtn"
+                class="md:hidden text-[#1ed760] hover:text-[#169c46] focus:outline-none transition-colors duration-200">
+                <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path id="hamburgerIconPath" stroke-linecap="round" stroke-linejoin="round"
+                        d="M4.499 8.248h15m-15 7.5h15" />
+                </svg>
+            </button>
+
+            <!-- Animated Bottom Line Container -->
+            <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gray-700/20 overflow-hidden">
+                <div
+                    class="h-full w-[35%] bg-gradient-to-r from-transparent via-[#1ed760] to-transparent animate-navbar-scan opacity-0">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu"
+            class="hidden flex-col items-start gap-4 px-6 py-6 absolute top-full left-0 right-0 mt-2 bg-[#08180c]/90 backdrop-blur-xl border border-[#1ed760]/30 rounded-2xl shadow-2xl z-50 md:hidden">
+            <a href="login.html"
+                class="text-white text-xl font-medium hover:underline decoration-[#1ed760] decoration-2 underline-offset-8 transition-colors">Login</a>
+            <a href="paket.html"
+                class="text-white text-xl font-medium underline decoration-[#1ed760] decoration-2 underline-offset-8 transition-colors">Paket</a>
+
+            <a href="faq.html"
+                class="text-white text-xl font-medium hover:underline decoration-[#1ed760] decoration-2 underline-offset-8 transition-colors">Faq</a>
+        </div>
+    </header>
+
+    <main class="w-full max-w-[1200px] mx-auto flex-1 overflow-y-auto px-4 py-8 custom-scrollbar">
+
+        <!-- Page Title -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Pilihan Paket Internet</h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">Hemat biayanya, maksimal koneksinya! Pilih paket yang
+                sesuai dengan kebutuhan Anda.</p>
+        </div>
+
+        <!-- Section: Voucher -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="text-2xl font-bold text-[#1ed760]">Voucher Hotspot</h2>
+                <div class="h-[1px] flex-1 bg-gray-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Voucher 2rb -->
+                <div
+                    class="bg-spot-input p-6 rounded-2xl border border-gray-700/40 hover:border-[#1ed760]/50 transition-all group">
+                    <div class="text-[#1ed760] font-bold text-sm mb-2 tracking-widest uppercase">Voucher 2 Jam</div>
+                    <div class="text-3xl font-black mb-4">Rp 2.000</div>
+                    <div class="flex items-center gap-2 text-gray-400 text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Aktif selama 2 jam</span>
+                    </div>
+                </div>
+
+                <!-- Voucher 5rb -->
+                <div
+                    class="bg-spot-input p-6 rounded-2xl border border-[#1ed760]/20 shadow-[0_0_20px_rgba(30,215,96,0.05)] hover:border-[#1ed760]/50 transition-all transform hover:scale-[1.02] group relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 bg-[#1ed760] text-black text-[10px] font-black px-3 py-1 rounded-bl-lg uppercase tracking-tighter">
+                        Populer</div>
+                    <div class="text-[#1ed760] font-bold text-sm mb-2 tracking-widest uppercase">Voucher 24 Jam</div>
+                    <div class="text-3xl font-black mb-4">Rp 5.000</div>
+                    <div class="flex items-center gap-2 text-gray-400 text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Aktif selama 24 jam</span>
+                    </div>
+                </div>
+
+                <!-- Voucher 35rb -->
+                <div
+                    class="bg-spot-input p-6 rounded-2xl border border-gray-700/40 hover:border-[#1ed760]/50 transition-all group">
+                    <div class="text-[#1ed760] font-bold text-sm mb-2 tracking-widest uppercase">Voucher 30 Hari</div>
+                    <div class="text-3xl font-black mb-4">Rp 50.000</div>
+                    <div class="flex items-center gap-2 text-gray-400 text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Aktif selama 30 Hari</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Bulanan -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="text-2xl font-bold text-[#1ed760]">Paket Bulanan Home</h2>
+                <div class="h-[1px] flex-1 bg-gray-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 10mbps -->
+                <div
+                    class="bg-spot-input p-8 rounded-2xl border border-gray-700/40 hover:border-[#1ed760]/50 transition-all group text-center">
+                    <div class="text-[#1ed760] font-bold text-sm mb-4 tracking-widest uppercase">Silver</div>
+                    <div class="text-2xl font-black mb-1">Rp 135.000</div>
+                    <div class="text-gray-400 text-sm mb-6">/Bulan</div>
+                    <div class="h-[1px] bg-gray-800 w-12 mx-auto mb-6"></div>
+                    <div class="font-bold text-white uppercase tracking-widest">Speed 10 Mbps</div>
+                </div>
+
+                <!-- 20mbps -->
+                <div
+                    class="bg-spot-input p-8 rounded-2xl border border-[#1ed760]/30 shadow-[0_0_30px_rgba(30,215,96,0.1)] hover:border-[#1ed760]/60 transition-all transform hover:scale-[1.02] group text-center relative overflow-hidden">
+                    <div class="absolute top-0 inset-x-0 h-1 bg-[#1ed760]"></div>
+                    <div class="text-[#1ed760] font-bold text-sm mb-4 tracking-widest uppercase">Gold</div>
+                    <div class="text-2xl font-black mb-1">Rp 175.000</div>
+                    <div class="text-gray-400 text-sm mb-6">/Bulan</div>
+                    <div class="h-[1px] bg-gray-800 w-12 mx-auto mb-6"></div>
+                    <div class="font-bold text-white uppercase tracking-widest">Speed 20 Mbps</div>
+                </div>
+
+                <!-- 50mbps -->
+                <div
+                    class="bg-spot-input p-8 rounded-2xl border border-gray-700/40 hover:border-[#1ed760]/50 transition-all group text-center">
+                    <div class="text-[#1ed760] font-bold text-sm mb-4 tracking-widest uppercase">Platinum</div>
+                    <div class="text-3xl font-black mb-1 text-white">Rp 345.000</div>
+                    <div class="text-gray-400 text-sm mb-6">/Bulan</div>
+                    <div class="h-[1px] bg-gray-800 w-12 mx-auto mb-6"></div>
+                    <div class="font-bold text-white uppercase tracking-widest">Speed 50 Mbps</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Copyright -->
+        <div class="text-center text-xs text-gray-500 font-light mt-12 pb-8">
+            © 2026 GMNET. All Rights Reserved
+        </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
